@@ -37,7 +37,11 @@
         });
 
         locations.forEach(function(location, i) {
-          const position = new google.maps.LatLng(location.lat, location.lng);
+          console.log("locations thingy");
+          console.log(location)
+          console.log(location.latitude);
+          console.log(location.longitude);
+          const position = new google.maps.LatLng(parseFloat(location.latitude), parseFloat(location.longitude));
           bounds.extend(position);
 
           // Add a marker
